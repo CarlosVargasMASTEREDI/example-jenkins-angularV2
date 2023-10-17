@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
-                sh 'ng serve --port=3200'
+                sh 'npm run startV2'
             }
         }
     }

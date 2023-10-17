@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "startV2": "ng serve --port=3200",
     "test": "ng test"
   },
   "private": true,
