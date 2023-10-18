@@ -14,7 +14,7 @@ pipeline {
         stage('Deliver'){
             steps {
                 sh 'set -x'
-                sh 'npm startV2 & sleep 1'
+                sh 'npm run startV2'
                 sh 'echo $! > .pidfile'
                 sh 'set +x'
             }
