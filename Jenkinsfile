@@ -9,7 +9,19 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
-                sh 'npm run startV2'
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh 'npm test'
+            }
+        }
+        stage('Deliver'){
+            steps {
+                sh 'set -x'
+                sh 'npm startV2 & sleep 1'
+                sh 'echo $! > .pidfile'
+                sh 'set +x'
             }
         }
     }
